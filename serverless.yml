@@ -1,12 +1,12 @@
-service: serverless-rest-api-with-dynamodb
-
-frameworkVersion: ">=1.1.0 <2.0.0"
+service: jm-serverless-rest-api-with-dynamodb
 
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+  region: eu-west-1
   environment:
-    DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
+    DYNAMODB_TABLE: ${self:service}-${sls:stage}
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -77,3 +77,9 @@ resources:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
         TableName: ${self:provider.environment.DYNAMODB_TABLE}
+
+package:
+  patterns:
+    - '!**'
+    - 'node_modules/**'
+    - 'todos/**'
