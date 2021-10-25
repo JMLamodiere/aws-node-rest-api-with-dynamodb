@@ -1,18 +1,8 @@
-<!--
-title: 'AWS Serverless REST API example in NodeJS'
-description: 'This example demonstrates how to setup a RESTful Web Service allowing you to create, list, get, update and delete Todos. DynamoDB is used to store the data.'
-layout: Doc
-framework: v1
-platform: AWS
-language: nodeJS
-priority: 10
-authorLink: 'https://github.com/ozbillwang'
-authorName: 'Bill Wang'
-authorAvatar: 'https://avatars3.githubusercontent.com/u/8954908?v=4&s=140'
--->
-# Serverless REST API
+# Serverless REST API Node.js Dynamodb (Serverless exercise)
 
-This example demonstrates how to setup a [RESTful Web Services](https://en.wikipedia.org/wiki/Representational_state_transfer#Applied_to_web_services) allowing you to create, list, get, update and delete Todos. DynamoDB is used to store the data. This is just an example and of course you could use any data storage as a backend.
+See https://www.udemy.com/course/aws-lambda-serverless/
+
+Exemple copied and adapted from https://github.com/serverless/examples/tree/master/aws-node-rest-api-with-dynamodb
 
 ## Structure
 
